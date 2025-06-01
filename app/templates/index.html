@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Swipe Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Word Swipe Game</h1>
+    <div id="game-container">
+        <div id="progress-indicator-container">
+            <p id="progress-indicator">Card 0 of 0</p>
+        </div>
+        <div id="card-container">
+            <p id="word-text">Loading...</p>
+        </div>
+        <div id="swipe-actions-container">
+            <button id="swipe-left-area">Positive</button>
+            <button id="swipe-right-area">Negative</button>
+        </div>
+    </div>
+
+    <div id="results-container" style="display:none; margin-top: 20px;">
+        <h2>Your Diagnosis Results</h2>
+        <div id="strengths-list">
+            <h3>Strengths</h3>
+            <ul>
+                <!-- Strengths will be populated here -->
+            </ul>
+        </div>
+        <div id="weaknesses-list">
+            <h3>Weaknesses</h3>
+            <ul>
+                <!-- Weaknesses will be populated here -->
+            </ul>
+        </div>
+        <p id="diagnosis-summary">Loading summary...</p>
+        <!-- Optional: Add a button to restart the session -->
+        <!-- <button id="restart-button">Start Over</button> -->
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
